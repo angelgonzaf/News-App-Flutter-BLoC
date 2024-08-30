@@ -11,6 +11,6 @@ abstract class NewsApi {
   @GET('/top-headlines?apiKey=${AppConstants.apiKey}&country=us')
   Future<NewsRemoteEntity> getTopHeadlines();
 
-  @GET('/top-headlines?apiKey=${AppConstants.apiKey}&country=it&category={cat}')
+  @GET('/top-headlines?apiKey=${AppConstants.apiKey}&country=us&category={cat}')
   Future<NewsRemoteEntity> getArticlesByCat(@Path("cat") String cat);
 }
