@@ -124,26 +124,22 @@ class _ButtonsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        RawMaterialButton(
-          onPressed: () {},
-          fillColor: myTheme.colorScheme.secondary,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          child: const Icon(Icons.star_border),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        RawMaterialButton(
-          onPressed: () {},
-          fillColor: Colors.blue,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          child: const Icon(Icons.more),
-        )
-      ]),
-    );
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      RawMaterialButton(
+        onPressed: () {},
+        fillColor: myTheme.colorScheme.secondary,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: const Icon(Icons.star_border),
+      ),
+      const SizedBox(
+        width: 20,
+      ),
+      RawMaterialButton(
+        onPressed: () {},
+        fillColor: Colors.blue,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: const Icon(Icons.more),
+      )
+    ]);
   }
 }

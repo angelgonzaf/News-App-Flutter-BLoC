@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart' hide Headers;
 import 'package:news_flutter_app/app/constants/app_constants.dart';
-import 'package:news_flutter_app/data/api/models/article_remote_entity.dart';
 import 'package:news_flutter_app/data/api/models/news_remote_entity.dart';
 import 'package:retrofit/http.dart';
 part 'news_api.g.dart';

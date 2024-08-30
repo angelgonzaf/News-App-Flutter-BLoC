@@ -32,7 +32,7 @@ class _NewsApi implements NewsApi {
     )
             .compose(
               _dio.options,
-              '/top-headlines?apiKey=03124485dac84333a26ca3c8bc964ead&country=us',
+              '/top-headlines?apiKey=<apiKey>&country=us',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -55,7 +55,7 @@ class _NewsApi implements NewsApi {
     )
             .compose(
               _dio.options,
-              '/top-headlines?apiKey=03124485dac84333a26ca3c8bc964ead&country=it&category=${cat}',
+              '/top-headlines?apiKey=<apiKey>&country=it&category=${cat}',
               queryParameters: queryParameters,
               data: _data,
             )

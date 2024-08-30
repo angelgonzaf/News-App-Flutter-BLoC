@@ -15,6 +15,7 @@ class _CustomNewsScreenState extends State<CustomNewsScreen>
     with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocBuilder<CustomNewsBloc, CustomNewsState>(
       builder: (context, state) {
         return Scaffold(

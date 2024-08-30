@@ -3,7 +3,6 @@ import 'package:get_it/get_it.dart';
 import 'package:news_flutter_app/app/constants/app_constants.dart';
 import 'package:news_flutter_app/data/api/news_api.dart';
 import 'package:news_flutter_app/data/datasources/remote/news_remote_data_source.dart';
-import 'package:news_flutter_app/data/datasources/remote/news_remote_data_source_contract.dart';
 import 'package:news_flutter_app/data/repository/news_repository.dart';
 import 'package:news_flutter_app/data/repository/news_repository_contract.dart';
 import 'package:news_flutter_app/ui/features/custom_news/bloc/custom_news_bloc.dart';

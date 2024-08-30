@@ -10,16 +10,14 @@ class TabsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: _Paginas(),
+      body: _Pages(),
       bottomNavigationBar: _BottomNavBar(),
     );
   }
 }
 
 class _BottomNavBar extends StatelessWidget {
-  const _BottomNavBar({
-    super.key,
-  });
+  const _BottomNavBar();
 
   @override
   Widget build(BuildContext context) {
@@ -31,17 +29,15 @@ class _BottomNavBar extends StatelessWidget {
                     .add(TabsEvent.changedTab(index: value))),
                 items: const [
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.person_outline), label: 'Para ti'),
+                      icon: Icon(Icons.person_outline), label: 'For you'),
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.public), label: 'Noticias')
+                      icon: Icon(Icons.public), label: 'News')
                 ]));
   }
 }
 
-class _Paginas extends StatelessWidget {
-  const _Paginas({
-    super.key,
-  });
+class _Pages extends StatelessWidget {
+  const _Pages();
 
   @override
   Widget build(BuildContext context) {
