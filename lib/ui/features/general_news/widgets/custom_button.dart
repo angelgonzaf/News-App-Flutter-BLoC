@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
       onTap: () {
         context
             .read<GeneralNewsBloc>()
-            .add(GeneralNewsEvent.selectCategory(catName: category.name));
+            .add(GeneralNewsEvent.selectCategory(category: category));
       },
       child: Container(
         width: 40,
@@ -22,12 +22,15 @@ class CustomButton extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 10),
         decoration:
             const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-        child: Icon(
-          category.icon,
-          color: context.read<GeneralNewsBloc>().state.selectedCategory?.name ==
-                  category.name
-              ? Colors.red
-              : Colors.black54,
+        child: BlocBuilder<GeneralNewsBloc, GeneralNewsState>(
+          builder: (context, state) {
+            return Icon(
+              category.icon,
+              color: state.selectedCategory?.name == category.name
+                  ? Colors.red
+                  : Colors.black54,
+            );
+          },
         ),
       ),
     );

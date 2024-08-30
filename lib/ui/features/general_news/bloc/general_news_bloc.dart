@@ -18,15 +18,19 @@ class GeneralNewsBloc extends Bloc<GeneralNewsEvent, GeneralNewsState> {
     on<GeneralNewsEvent>((event, emit) async {
       await event.when(selectCategory: (cat) async {
         emit(state.copyWith(screenStatus: const ScreenStatus.loading()));
-        final res = await _repository.getArticlesByCat(cat);
+        final res = await _repository.getArticlesByCat(cat.name);
         res.when(
           success: (data) {
             emit(state.copyWith(
-                screenStatus: const ScreenStatus.success(), articles: data));
+                screenStatus: const ScreenStatus.success(),
+                articles: data,
+                selectedCategory: cat));
           },
           failure: (e) {
             emit(
-              state.copyWith(screenStatus: const ScreenStatus.error()),
+              state.copyWith(
+                  screenStatus: const ScreenStatus.error(),
+                  selectedCategory: cat),
             );
           },
         );
